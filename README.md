@@ -1,3 +1,3 @@
 # kokoa-clone-2020
 
-pratice css and html
+practice css and html by listening Nomad Coder course
