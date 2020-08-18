@@ -1,0 +1,41 @@
+
+/*
+여기서 center대신 space-between을 해도 되지만, 그러면 서로 떨어져 있는 간격이 같기 때문에 시계가 약간 오른쪽에 치우쳐진다.
+우리가 원하는 대로 중간에 나오게 하기 위해선,
+전체 center 후 column width를 33%씩으로 나눈 뒤에, 중간은 센터, 끝에는 flex-end를 아래처럼 걸어주면 된다.
+*/
+.status-bar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display:flex;
+    justify-content: center;    
+    padding: 5px 3px;
+}
+
+.status-bar__column{
+    width:33%;
+}
+
+.status-bar__column:first-child span {
+    margin-right: 5px;
+}
+
+.status-bar__column:nth-child(2){
+    display:flex;
+    justify-content: center;
+}
+
+.status-bar__column:last-child{
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.status-bar__column .fa-battery-full{
+    margin: 0px 5px;
+}
+
+input:focus{
+    outline: none;
+}
